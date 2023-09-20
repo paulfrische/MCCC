@@ -4,5 +4,6 @@
 -std=c11
 -Ilib/glfw/include
 -Ilib/glad/include
+-Ilib/cglm/include
 lib/glad/src/glad.c
 -DLEVEL=5
