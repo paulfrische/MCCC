@@ -5,5 +5,6 @@
 -Ilib/glfw/include
 -Ilib/glad/include
 -Ilib/cglm/include
+-Ilib/stb
 lib/glad/src/glad.c
 -DLEVEL=5

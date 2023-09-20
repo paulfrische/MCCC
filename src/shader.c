@@ -57,4 +57,13 @@ Shader create_shader(const char* vertex, const char* fragment)
     return s;
 }
 
+void shader_set_bool(Shader s, const char* name, bool value)
+{
+    glUniform1i(glGetUniformLocation(s.id, name), (u32)value);
+}
+
+void shader_set_u32(Shader s, const char* name, u32 value) { glUniform1i(glGetUniformLocation(s.id, name), value); }
+
+void shader_set_f32(Shader s, const char* name, f32 value) { glUniform1f(glGetUniformLocation(s.id, name), value); }
+
 void use_shader(Shader s) { glUseProgram(s.id); }

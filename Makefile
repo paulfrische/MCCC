@@ -5,7 +5,7 @@ DEFINES = -DLEVEL=5
 
 CFLAGS = -Wall -Wextra -g -std=c11
 LDFLAGS = lib/glfw/src/libglfw3.a -lm lib/cglm/libcglm.a
-INCLUDE = -Ilib/glfw/include -Ilib/glad/include -Ilib/cglm/include
+INCLUDE = -Ilib/glfw/include -Ilib/glad/include -Ilib/cglm/include -Ilib/stb/
 
 SRCS = $(wildcard src/*.c src/**/*.c) lib/glad/src/gl.c
 OBJ = $(SRCS:.c=.o)
