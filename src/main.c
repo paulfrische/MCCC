@@ -12,12 +12,12 @@
 
 int main(void)
 {
-	if (!glfwInit()) {
-		CRITICAL("failed to initialize GLFW");
-		return EXIT_FAILURE;
-	}
-	
-	DEBUG("initialized GLFW");
+    if (!glfwInit()) {
+        CRITICAL("failed to initialize GLFW");
+        return EXIT_FAILURE;
+    }
+
+    DEBUG("initialized GLFW");
 
     return EXIT_SUCCESS;
 }
