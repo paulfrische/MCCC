@@ -16,7 +16,9 @@ libs:
 test: all
 	./build/out
 
-all: $(OBJ)
+all: libs program
+
+program: $(OBJ)
 	mkdir -p $(OUT)
 	$(CC) -o $(OUT)/out $^ $(LDFLAGS)
 
