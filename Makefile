@@ -5,9 +5,9 @@ DEFINES = -DLEVEL=5
 
 CFLAGS = -Wall -Wextra -g -std=c11
 LDFLAGS = lib/glfw/src/libglfw3.a -lm
-INCLUDE = -Ilib/glfw/include
+INCLUDE = -Ilib/glfw/include -Ilib/glad/include
 
-SRCS = $(wildcard src/*.c src/**/*.c)
+SRCS = $(wildcard src/*.c src/**/*.c) lib/glad/src/glad.c
 OBJ = $(SRCS:.c=.o)
 
 libs:
@@ -23,7 +23,7 @@ program: $(OBJ)
 	$(CC) -o $(OUT)/out $^ $(LDFLAGS)
 
 %.o: %.c
-	$(CC) -o $@ -c $< $(CFLAGS) $(DEFINES)
+	$(CC) -o $@ -c $< $(INCLUDE) $(CFLAGS) $(DEFINES)
 
 .PHONY: clean
 clean:
