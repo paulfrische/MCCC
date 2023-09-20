@@ -3,6 +3,7 @@
 #include "base/logging.h"
 #include "base/memory.h"
 #include "base/string.h"
+#include "window.h"
 
 #include <GLFW/glfw3.h>
 
@@ -12,12 +13,15 @@
 
 int main(void)
 {
-    if (!glfwInit()) {
-        CRITICAL("failed to initialize GLFW");
-        return EXIT_FAILURE;
+    GLFWwindow* window = init_window();
+
+    while (!glfwWindowShouldClose(window)) {
+
+        glfwSwapBuffers(window);
+
+        glfwPollEvents();
     }
 
-    DEBUG("initialized GLFW");
-
+    destroy_window();
     return EXIT_SUCCESS;
 }
