@@ -5,7 +5,9 @@
 #include "base/string.h"
 #include "window.h"
 
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
+#include <glad/gl.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,8 +19,9 @@ int main(void)
 
     while (!glfwWindowShouldClose(window)) {
 
-        glfwSwapBuffers(window);
+        glClear(GL_COLOR_BUFFER_BIT);
 
+        glfwSwapBuffers(window);
         glfwPollEvents();
     }
 

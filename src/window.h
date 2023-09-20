@@ -1,4 +1,6 @@
+#define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
+#include <glad/gl.h>
 
 #define WIDTH 1280
 #define HEIGHT 720

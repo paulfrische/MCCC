@@ -1,0 +1,8 @@
+-Wall
+-Wextra
+-g
+-std=c11
+-Ilib/glfw/include
+-Ilib/glad/include
+lib/glad/src/glad.c
+-DLEVEL=5

@@ -7,7 +7,7 @@ CFLAGS = -Wall -Wextra -g -std=c11
 LDFLAGS = lib/glfw/src/libglfw3.a -lm
 INCLUDE = -Ilib/glfw/include -Ilib/glad/include
 
-SRCS = $(wildcard src/*.c src/**/*.c) lib/glad/src/glad.c
+SRCS = $(wildcard src/*.c src/**/*.c) lib/glad/src/gl.c
 OBJ = $(SRCS:.c=.o)
 
 libs:
